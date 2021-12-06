@@ -41,7 +41,7 @@ create trigger TR_Articulos_Update
     end;
 // delimiter ;
 
-drop table if exists TR_Articulos_Delete;
+drop trigger if exists TR_Articulos_Delete;
 delimiter //
 create trigger TR_Articulos_Delete
 	after delete
