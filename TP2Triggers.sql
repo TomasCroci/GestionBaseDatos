@@ -53,3 +53,10 @@ create trigger TR_Articulos_Delete
 			(select user()),old.id);
     end;
 // delimiter ;
+
+call SP_Articulos_Insert("Whiskas","Carne",'ALIMENTO','FELINO',925,1500,6,3,30,null,true);
+UPDATE articulos SET descripcion = "felino", stock = "4" WHERE id = 3;
+call SP_Articulos_Delete(4);
+select * from tabla_Control;
+select * from articulos;
+show databases;
